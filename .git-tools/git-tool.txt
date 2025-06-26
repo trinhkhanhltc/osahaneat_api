@@ -1,0 +1,3 @@
+function git-tool {
+    powershell -ExecutionPolicy Bypass -File "D:\Learning_SpringBoot\osahaneat\.git-tools\git-tool.ps1" @args
+}
