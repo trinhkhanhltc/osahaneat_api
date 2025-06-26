@@ -19,7 +19,7 @@ public class Users {
   private int id;
   private String userName;
   private String password;
-  private String fullname;
+  private String fullName;
   private Date createDate;
   @ManyToOne
   @JoinColumn(name = "role_id")
