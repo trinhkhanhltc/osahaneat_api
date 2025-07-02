@@ -2,7 +2,8 @@ package com.khanhtt.osahaneat.controller;
 
 import com.khanhtt.osahaneat.dto.UserDTO;
 import com.khanhtt.osahaneat.model.LoginRequest;
-import com.khanhtt.osahaneat.model.LoginResponse;
+import com.khanhtt.osahaneat.model.LoginOrSignUpResponse;
+import com.khanhtt.osahaneat.model.SignUpRequest;
 import com.khanhtt.osahaneat.service.UserService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -25,8 +26,14 @@ public class LoginController {
   }
 
   @PostMapping("/login")
-  public LoginResponse login(@RequestBody LoginRequest request)
+  public LoginOrSignUpResponse login(@RequestBody LoginRequest request)
   {
     return service.login(request);
+  }
+
+  @PostMapping("signup")
+  public LoginOrSignUpResponse signup(@RequestBody SignUpRequest request)
+  {
+    return service.signup(request);
   }
 }

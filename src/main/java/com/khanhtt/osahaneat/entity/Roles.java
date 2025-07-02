@@ -20,4 +20,8 @@ public class Roles {
 
   @OneToMany(mappedBy = "roles")
   private Set<Users> listUser;
+
+  public void setId(int id) {
+    this.id = id;
+  }
 }
